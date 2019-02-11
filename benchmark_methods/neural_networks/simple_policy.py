@@ -2,12 +2,12 @@ from typing import List
 
 import tensorflow as tf
 import numpy as np
-import trfl
 
 from cor_control_benchmarks.control_benchmark import ControlBenchmark
 
 from benchmark_methods.common.experience_buffer import BaseExperienceBuffer
 from benchmark_methods.common.policy import AbstractPolicy
+from benchmark_methods.common.rl_nn_helpers import periodic_target_update
 from benchmark_methods.neural_networks.models import NAFNetwork
 
 
@@ -45,7 +45,7 @@ class BasicNAFPolicy(AbstractPolicy):
 
         self.p_continue = gamma * (1 - self.terminal_input)
 
-        self.frozen_parameter_update_op = trfl.periodic_target_update(
+        self.frozen_parameter_update_op = periodic_target_update(
             target_variables=self.Q_lowpass.model.variables,
             source_variables=self.Q.model.variables,
             update_period=1,

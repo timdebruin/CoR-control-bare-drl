@@ -1,5 +1,4 @@
 matplotlib
 -e git+git://github.com/timdebruin/CoR-control-benchmarks#egg=CoR-control-benchmarks
-trfl
 tqdm
 numpy

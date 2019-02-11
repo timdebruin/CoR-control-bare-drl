@@ -89,7 +89,7 @@ def main():
 
             progress_bar.set_postfix({
                 'best reward sum': diagnostics.best_reward_sum,
-                'last_reward_sum': f'{diagnostics.last_reward_sum:4.f}'
+                'last_reward_sum': f'{diagnostics.last_reward_sum:4.3f}'
             })
             # if diagnostics.best_episode:
             #     policy.save_params_to_dir(save_dir)
