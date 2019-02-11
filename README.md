@@ -16,7 +16,7 @@ For the GPU version:
 pip install tensorflow-gpu
 ``` 
 
-The remaining requirements can be installed by running the following command from the main repositpry directory (after downloading / cloning):
+The remaining requirements can be installed by running the following command from the main repository directory (after downloading / cloning):
 ```bash
 pip install -r requirements.txt
 ```
